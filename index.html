@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEHRI - Growing Hope, Restoring Nature, Empowering Communities</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="network-header" id="header">
+        <div class="nav-wrapper">
+            <a href="#home" class="network-logo">GEHRI FOUNDATION</a>
+            
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+                <i data-lucide="menu" class="menu-icon"></i>
+                <i data-lucide="x" class="close-icon" style="display: none;"></i>
+            </button>
+
+            <nav class="network-nav" id="mainNav">
+                <a href="#about" class="network-nav-link">About</a>
+                <a href="#focus" class="network-nav-link">Focus Areas</a>
+                <a href="#impact" class="network-nav-link">Impact</a>
+                <a href="#gallery" class="network-nav-link">Gallery</a>
+                <a href="#contact" class="network-nav-link">Contact</a>
+                <a href="#donate" class="btn-primary btn-nav">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-large hero-title">
+                GEHRI FOUNDATION<br/><h2 class="display-large hero-title">Global Environmental Health</h2><h1 class="display-large hero-title">and</h1><br/><h2 class="display-large hero-title">Resource protection Initiative</h2>
+            </h1>
+            <p class="body-large hero-subtitle" style="color: rgb(247, 247, 249);">
+                From the Ground Up, For a Better Tomorrow<br/>
+                Driving Sustainable Impact Through Community Action
+            </p>
+            <div class="hero-buttons">
+                <a href="#donate" class="btn-cta">
+                    <i data-lucide="heart"></i> Donate Now
+                </a>
+                <a href="#get-involved" class="btn-secondary btn-large">
+                    Get Involved <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1693967318820-acbd63a0201b" alt="Nature" />
+                </div>
+                <div class="about-content">
+                    <h2 class="heading-1 section-title">About GEHRI</h2>
+                    <div class="about-blocks">
+                        <div class="about-block">
+                            <h3 class="heading-3">Who We Are</h3>
+                            <p class="body-medium">
+                                GEHRI Foundation is a registered non-profit organization working towards environmental conservation, community development, and sustainable social impact. Rooted in grassroots action and driven by responsibility, we focus on creating long-term change through practical, community-led initiatives.
+                            </p>
+                        </div>
+                        <div class="about-block">
+                            <h3 class="heading-3">Why We Exist</h3>
+                            <p class="body-medium">
+                                GEHRI Foundation exists to carry forward a legacy of nurturing nature and protecting life. Inspired by the values of our founder’s grandmother, GEHRI, who believed in planting trees and preserving the environment, we aim to transform personal responsibility into collective impact.
+                            </p>
+                        </div>
+                        <div class="about-block">
+                            <h3 class="heading-3">Our Values</h3>
+                            <p class="body-medium">
+                                Transparency, community engagement, environmental stewardship, and measurable impact guide every action we take.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas Section -->
+    <section id="focus" class="focus-section section-padding">
+        <div class="container">
+            <h2 class="heading-1 section-title text-center">Our Focus Areas</h2>
+            <p class="body-large text-center section-subtitle">
+                Comprehensive initiatives for sustainable environmental and social impact
+            </p>
+            <div class="network-grid" id="focusAreasGrid">
+                <!-- Focus area cards will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section section-padding">
+        <div class="container">
+            <h2 class="heading-1 section-title text-center">Our Impact</h2>
+            <p class="body-large text-center section-subtitle">
+                Measurable change, transparent progress
+            </p>
+            <div class="impact-grid">
+                <div class="impact-stat">
+                    <div class="impact-number" data-target="50000">0</div>
+                    <div class="impact-label">Trees Planted</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number" data-target="25000">0</div>
+                    <div class="impact-label">Lives Impacted</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number" data-target="1500">0</div>
+                    <div class="impact-label">Active Volunteers</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number" data-target="45">0</div>
+                    <div class="impact-label">Ongoing Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="involve-section section-padding">
+        <div class="container">
+            <h2 class="heading-1 section-title text-center">Get Involved</h2>
+            <p class="body-large text-center section-subtitle">
+                Join us in creating sustainable change
+            </p>
+            <div class="involve-grid">
+                <div class="network-card involve-card">
+                    <div class="involve-card-content">
+                        <h3 class="heading-2">Students & Youth</h3>
+                        <p class="body-medium">
+                            Volunteer opportunities, internships, and skill-building programs for passionate young changemakers.
+                        </p>
+                        <button class="btn-primary" onclick="openInvolveForm('student')">
+                            Learn More <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="network-card involve-card">
+                    <div class="involve-card-content">
+                        <h3 class="heading-2">General Public</h3>
+                        <p class="body-medium">
+                            Participate in plantation drives, workshops, and community initiatives that make a real difference.
+                        </p>
+                        <button class="btn-primary" onclick="openInvolveForm('public')">
+                            Join Us <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="network-card involve-card">
+                    <div class="involve-card-content">
+                        <h3 class="heading-2">Corporates & CSR</h3>
+                        <p class="body-medium">
+                            Partner with us for meaningful CSR initiatives with transparent impact measurement and reporting.
+                        </p>
+                        <button class="btn-primary" onclick="openInvolveForm('corporate')">
+                            Partner With Us <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="container">
+            <h2 class="heading-1 section-title text-center">Impact in Action</h2>
+            <p class="body-large text-center section-subtitle">
+                Real stories, real change
+            </p>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section section-padding">
+        <div class="container">
+            <h2 class="heading-1 section-title text-center">Our Partners</h2>
+            <p class="body-medium text-center section-subtitle">
+                Registered NGO committed to transparency and ethical practices
+            </p>
+            <div class="partners-note">
+                <p class="body-medium text-center">
+                    We collaborate with leading organizations to amplify our impact and ensure sustainable development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="heading-1">Get in Touch</h2>
+                    <p class="body-large">
+                        Have questions or want to collaborate? We'd love to hear from you.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>info@gehrifoundation.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+91 9602680921</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>1349, Khera, Tilora Road, Bagoria, Bhopalgarh, Jodhpur, Rajasthan-342603</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" name="name" placeholder="Your Name" required class="form-input" />
+                        <input type="email" name="email" placeholder="Your Email" required class="form-input" />
+                        <input type="text" name="subject" placeholder="Subject" required class="form-input" />
+                        <textarea name="message" placeholder="Your Message" rows="5" required class="form-textarea"></textarea>
+                        <button type="submit" class="btn-primary btn-large">
+                            Send Message <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Modal -->
+    <div id="donateModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('donateModal')">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="donate-header">
+                <i data-lucide="heart" class="donate-icon"></i>
+                <h2 class="heading-1">Make a Difference Today</h2>
+                <p class="body-large text-center">
+                    Your contribution directly supports tree plantation, community development, and environmental education programs.
+                </p>
+            </div>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i data-lucide="tree-pine"></i>
+                    <span class="body-small">100% Transparent</span>
+                </div>
+                <div class="trust-badge">
+                    <i data-lucide="users"></i>
+                    <span class="body-small">Direct Impact</span>
+                </div>
+                <div class="trust-badge">
+                    <i data-lucide="book-open"></i>
+                    <span class="body-small">Regular Updates</span>
+                </div>
+            </div>
+
+            <h3 class="heading-2">Choose Your Impact</h3>
+            <div class="donation-options" id="donationOptions">
+                <button class="donation-option" onclick="selectAmount(500)">
+                    <div class="donation-amount">₹500</div>
+                    <div class="donation-impact">Plant 10 trees</div>
+                </button>
+                <button class="donation-option" onclick="selectAmount(1000)">
+                    <div class="donation-amount">₹1000</div>
+                    <div class="donation-impact">Support 1 education workshop</div>
+                </button>
+                <button class="donation-option" onclick="selectAmount(2500)">
+                    <div class="donation-amount">₹2500</div>
+                    <div class="donation-impact">Fund community cleanup drive</div>
+                </button>
+                <button class="donation-option" onclick="selectAmount(5000)">
+                    <div class="donation-amount">₹5000</div>
+                    <div class="donation-impact">Sponsor 1 month sustainability project</div>
+                </button>
+            </div>
+
+            <div class="custom-amount">
+                <label class="body-medium">Or enter custom amount:</label>
+                <input type="number" id="customAmount" placeholder="Enter amount in ₹" class="form-input" min="100" />
+            </div>
+
+            <form class="donation-form" id="donationForm">
+                <h3 class="heading-3">Your Details</h3>
+                <input type="text" name="name" placeholder="Full Name" required class="form-input" />
+                <input type="email" name="email" placeholder="Email Address" required class="form-input" />
+                <input type="tel" name="phone" placeholder="Phone Number" required class="form-input" />
+                
+                <div class="form-checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter" />
+                    <label for="newsletter" class="body-small">
+                        Send me updates about GEHRI's impact
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-cta btn-full">
+                    <i data-lucide="heart"></i> Donate <span id="selectedAmount">₹___</span>
+                </button>
+            </form>
+
+            <p class="caption text-center donation-note">
+                Your donation is eligible for tax benefits under 80G. Receipt will be sent to your email.
+            </p>
+        </div>
+    </div>
+
+    <!-- Get Involved Modal -->
+    <div id="involveModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('involveModal')">
+                <i data-lucide="x"></i>
+            </button>
+            <h2 class="heading-1 text-center">Join the Movement</h2>
+            <form class="involved-form" id="involveForm">
+                <input type="hidden" id="involveType" name="type" />
+                <h3 class="heading-3" id="involveFormTitle">Express Your Interest</h3>
+                <input type="text" name="name" placeholder="Full Name" required class="form-input" />
+                <input type="email" name="email" placeholder="Email" required class="form-input" />
+                <input type="tel" name="phone" placeholder="Phone Number" required class="form-input" />
+                <select name="interest" required class="form-input" id="interestSelect">
+                    <option value="">Select Interest Area</option>
+                </select>
+                <textarea name="message" placeholder="Tell us why you want to join GEHRI" rows="4" class="form-textarea"></textarea>
+                <button type="submit" class="btn-primary btn-large">
+                    <i data-lucide="send"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="heading-3">GEHRI FOUNDATION </h3>
+                    <p class="body-small">
+                        Growing Hope, Restoring Nature,<br />Empowering Communities
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="body-medium footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#focus">Focus Areas</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="body-medium footer-title">Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="#get-involved">Volunteer</a></li>
+                        <li><a href="#get-involved">Partner With Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="caption">
+                    © 2025 GEHRI. All rights reserved. Committed to transparency and sustainable impact.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

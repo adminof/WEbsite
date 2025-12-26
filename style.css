@@ -1,0 +1,1054 @@
+/* GEHRI NGO Website Styles - Following Network Playbook */
+
+/* ========================================
+   1. CSS VARIABLES - Exact Network Colors
+   ======================================== */
+:root {
+  /* Backgrounds */
+  --bg-page: #FAFFEE;
+  --bg-card: #FAFAFF;
+  --bg-subtle: #EDEDFE;
+  --bg-section: #CACAFC;
+  
+  /* Text */
+  --text-primary: #004534;
+  --text-secondary: #0C6951;
+  --text-light: #807979;
+  
+  /* Borders */
+  --border-light: #CACAFC;
+  --border-medium: #DDDDDD;
+  --border-strong: #B0B0B0;
+  
+  /* Brand Colors */
+  --brand-primary: #D3FF62;
+  --brand-dark: #004534;
+  --brand-hover: #0C6951;
+  
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-small: 16px;
+  --spacing-medium: 24px;
+  --spacing-large: 32px;
+  --spacing-xl: 48px;
+  --spacing-giant: 64px;
+}
+
+/* ========================================
+   2. GLOBAL STYLES
+   ======================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   3. NAVIGATION - Exact Network Style
+   ======================================== */
+.network-header {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0 12px;
+  transition: top 0.3s ease;
+}
+
+.network-header.scrolled {
+  top: 0;
+}
+
+.nav-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: var(--brand-dark);
+  border-radius: 25px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 69, 52, 0.25);
+}
+
+.network-logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.network-logo:hover {
+  opacity: 0.9;
+}
+
+.network-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.network-nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+.network-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-nav {
+  margin-left: 8px;
+}
+
+/* ========================================
+   4. BUTTONS - Pill Shape
+   ======================================== */
+.btn-primary {
+  background: var(--brand-dark);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 32px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  line-height: 1.2;
+}
+
+.btn-primary:hover {
+  background: var(--brand-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 69, 52, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-dark);
+  border: 2px solid var(--brand-dark);
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-cta {
+  border-radius: 33px;
+  padding: 18px 36px;
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--brand-dark);
+  color: white;
+  min-height: 54px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  background: var(--brand-hover);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 69, 52, 0.25);
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+.network-nav .btn-primary {
+  background: var(--brand-primary);
+  color: var(--brand-dark);
+}
+
+.network-nav .btn-primary:hover {
+  background: white;
+}
+
+/* ========================================
+   5. HERO SECTION
+   ======================================== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1761619924480-70ac3ea33b67');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 100px 20px 60px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 69, 52, 0.85) 0%, rgba(12, 105, 81, 0.75) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  color: white;
+  margin-bottom: 40px;
+  text-shadow: 0 1px 4px rgba(246, 244, 244, 0.2);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn-secondary {
+  background: white;
+  color: var(--brand-dark);
+  border-color: white;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+/* ========================================
+   6. SECTIONS
+   ======================================== */
+.section-padding {
+  padding: var(--spacing-giant) var(--spacing-small);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.section-title {
+  margin-bottom: var(--spacing-medium);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ========================================
+   7. ABOUT SECTION
+   ======================================== */
+.about-section {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 4px 16px rgba(0, 69, 52, 0.15);
+}
+
+.about-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.about-block {
+  padding: var(--spacing-medium);
+  background: var(--bg-subtle);
+  border-radius: 24px;
+  transition: transform 0.3s ease;
+}
+
+.about-block:hover {
+  transform: translateX(8px);
+}
+
+.about-block h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+/* ========================================
+   8. FOCUS AREAS
+   ======================================== */
+.focus-section {
+  background: var(--bg-subtle);
+}
+
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-xl);
+}
+
+.network-card {
+  background: var(--bg-card);
+  border-radius: 32px;
+  padding: var(--spacing-large);
+  box-shadow: 0 2px 8px rgba(0, 69, 52, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.network-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 69, 52, 0.15);
+  border-color: var(--brand-primary);
+}
+
+.focus-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--brand-primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-dark);
+  margin-bottom: var(--spacing-medium);
+}
+
+.focus-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.network-card-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.network-card-content {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   9. IMPACT SECTION
+   ======================================== */
+.impact-section {
+  background: white;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-xl);
+}
+
+.impact-stat {
+  text-align: center;
+  padding: var(--spacing-large);
+  background: var(--bg-subtle);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+
+.impact-stat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 69, 52, 0.15);
+}
+
+.impact-number {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: var(--spacing-small);
+}
+
+.impact-label {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ========================================
+   10. GET INVOLVED SECTION
+   ======================================== */
+.involve-section {
+  background: var(--bg-subtle);
+}
+
+.involve-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-xl);
+}
+
+.involve-card {
+  background: white;
+  border-radius: 32px;
+  transition: all 0.3s ease;
+}
+
+.involve-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 69, 52, 0.2);
+}
+
+.involve-card-content {
+  padding: var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.involve-card-content h3 {
+  color: var(--text-primary);
+}
+
+.involve-card-content p {
+  color: var(--text-secondary);
+  flex-grow: 1;
+}
+
+/* ========================================
+   11. GALLERY SECTION
+   ======================================== */
+.gallery-section {
+  background: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-xl);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 69, 52, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 69, 52, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 69, 52, 0.9), transparent);
+  padding: var(--spacing-medium);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+/* ========================================
+   12. PARTNERS SECTION
+   ======================================== */
+.partners-section {
+  background: var(--bg-subtle);
+}
+
+.partners-note {
+  max-width: 800px;
+  margin: var(--spacing-large) auto 0;
+  padding: var(--spacing-large);
+  background: white;
+  border-radius: 24px;
+  border-left: 4px solid var(--brand-primary);
+}
+
+/* ========================================
+   13. CONTACT SECTION
+   ======================================== */
+.contact-section {
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.contact-info h2 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-large);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.contact-item svg {
+  color: var(--brand-dark);
+  width: 24px;
+  height: 24px;
+}
+
+.contact-form-wrapper {
+  background: var(--bg-subtle);
+  padding: var(--spacing-large);
+  border-radius: 32px;
+}
+
+.contact-form,
+.involved-form,
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.form-input,
+.form-textarea {
+  padding: 14px 20px;
+  border: 2px solid var(--border-medium);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--brand-dark);
+  box-shadow: 0 0 0 3px rgba(0, 69, 52, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   14. MODALS
+   ======================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 69, 52, 0.9);
+  overflow-y: auto;
+  padding: var(--spacing-medium);
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: var(--spacing-xl);
+  border-radius: 32px;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 69, 52, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--spacing-medium);
+  right: var(--spacing-medium);
+  background: var(--bg-subtle);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: var(--brand-dark);
+  color: white;
+}
+
+.modal-close svg {
+  width: 24px;
+  height: 24px;
+}
+
+.donate-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.donate-icon {
+  color: var(--brand-dark);
+  margin-bottom: var(--spacing-medium);
+  width: 64px;
+  height: 64px;
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-large);
+  margin: var(--spacing-xl) 0;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+}
+
+.trust-badge svg {
+  color: var(--brand-dark);
+  width: 32px;
+  height: 32px;
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-medium);
+  margin: var(--spacing-large) 0;
+}
+
+.donation-option {
+  padding: var(--spacing-medium);
+  background: var(--bg-subtle);
+  border: 2px solid var(--border-medium);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.donation-option:hover {
+  border-color: var(--brand-dark);
+  transform: translateY(-2px);
+}
+
+.donation-option.selected {
+  background: var(--brand-primary);
+  border-color: var(--brand-dark);
+}
+
+.donation-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.donation-impact {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.custom-amount {
+  margin: var(--spacing-large) 0;
+}
+
+.custom-amount label {
+  display: block;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.donation-note {
+  margin-top: var(--spacing-medium);
+  color: var(--text-light);
+}
+
+/* ========================================
+   15. FOOTER
+   ======================================== */
+.footer {
+  background: var(--brand-dark);
+  color: white;
+  padding: var(--spacing-xl) var(--spacing-small) var(--spacing-medium);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: var(--brand-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-title {
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 4px 0;
+}
+
+.footer-links a:hover {
+  color: var(--brand-primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-medium);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================
+   16. TYPOGRAPHY
+   ======================================== */
+.display-large {
+  font-size: clamp(3rem, 6.5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.display-medium {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.heading-1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.heading-3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.body-medium {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.body-small {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+.caption {
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-light);
+}
+
+/* ========================================
+   17. RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1024px) {
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .network-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 781px) {
+  .network-header {
+    top: 0;
+    position: fixed;
+  }
+  
+  .nav-wrapper {
+    border-radius: 0;
+    padding: 16px;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .network-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--brand-dark);
+    flex-direction: column;
+    padding: var(--spacing-medium);
+    gap: var(--spacing-small);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 4px 12px rgba(0, 69, 52, 0.2);
+  }
+  
+  .network-nav.mobile-open {
+    display: flex;
+  }
+  
+  .network-nav-link {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .hero-section {
+    padding: 140px 20px 60px;
+    min-height: 90vh;
+    background-attachment: scroll;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn-cta,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .section-padding {
+    padding: var(--spacing-xl) var(--spacing-small);
+  }
+  
+  .network-grid,
+  .involve-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-image img {
+    height: 300px;
+  }
+  
+  .donation-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-grid,
+  .donation-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .trust-badges {
+    flex-direction: column;
+  }
+}
